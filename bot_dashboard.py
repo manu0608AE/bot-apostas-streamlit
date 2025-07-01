@@ -11,7 +11,7 @@ def obter_jogos_hoje():
     url = f"https://api-football-v1.p.rapidapi.com/v3/fixtures?date={hoje}"
 
     headers = {
-        "X-RapidAPI-Key": "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",
+        "X-RapidAPI-Key": "b5be5f2d70msh26a79bd2b6cffc0p1fa1cdjsn3f49b27ef069",
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
