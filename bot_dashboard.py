@@ -1,5 +1,4 @@
-
-# Bot de Apostas com Dashboard (Streamlit)
+# Bot de Apostas com Dashboard (com jogos reais via API-Football)
 
 import requests
 import datetime
@@ -12,8 +11,9 @@ def obter_jogos_hoje():
     url = f"https://api-football-v1.p.rapidapi.com/v3/fixtures?date={hoje}"
 
     headers = {
-        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
-        }
+        "X-RapidAPI-Key": "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",
+        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
+    }
 
     resposta = requests.get(url, headers=headers)
     dados = resposta.json()
@@ -53,7 +53,7 @@ def prever_mercados(jogo):
 def main():
     st.set_page_config(page_title="Bot de Apostas Futebol", layout="wide")
     st.title("📊 Bot de Apostas Desportivas - Futebol")
-    st.subheader("Jogos de Hoje com Sugestões de Mercado")
+    st.subheader("Jogos reais com sugestões de mercado")
 
     jogos = obter_jogos_hoje()
     linhas = []
